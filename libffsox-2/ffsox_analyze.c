@@ -43,7 +43,7 @@ int ffsox_analyze(analyze_config_t *ac)
   char buf[32];
 
   // create a source.
-  if (ffsox_source_create(&si,ac->path,-1,-1,progress,ac->f)<0) {
+  if (ffsox_source_create(&si,ac->path,ac->ai,ac->vi,progress,ac->f)<0) {
     DMESSAGE("creating source");
     goto si;
   }

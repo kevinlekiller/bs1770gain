@@ -299,6 +299,8 @@ struct ffsox_analyze_config {
   ffsox_block_config_t shortterm;
   FILE *f;
   int dump;
+  int ai;
+  int vi;
 };
 
 int ffsox_analyze(ffsox_analyze_config_t *ac);
