@@ -58,7 +58,7 @@ int ffsox_audiostream(AVFormatContext *fc, int *aip, int *vip)
           if (*aip==i)
             ai=i;
         }
-        else if (ai<0||2==cc->channels)
+        else if (ai<0/*||2==cc->channels*/)
           ai=i;
 
         break;
