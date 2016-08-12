@@ -66,6 +66,11 @@ int ffsox_analyze(analyze_config_t *ac)
   cc.momentary=ac->momentary;
   cc.shortterm=ac->shortterm;
 
+  if (LIB1770_MAX_CHANNELS <= cc.channels) {
+    fprintf(stderr, "\nError: ITU BS.1770 specifies only up to 5 audio channels, this audio track has %d channels.\n", cc.channels);
+    goto si;
+  }
+
   if (ffsox_collect_create(&collect,&cc)<0) {
     DMESSAGE("creating collector");
     goto collect;

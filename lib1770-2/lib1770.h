@@ -51,7 +51,7 @@ extern "C" {
 
 ///////////////////////////////////////////////////////////////////////////////
 #define LIB1770_BUF_SIZE      9
-#define LIB1770_MAX_CHANNELS  8
+#define LIB1770_MAX_CHANNELS  5
 
 #define LIB1770_Q2DB(q) \
   (20.0*log10(q))
