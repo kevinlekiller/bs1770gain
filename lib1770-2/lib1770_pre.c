@@ -173,7 +173,7 @@ void lib1770_pre_add_sample(lib1770_pre_t *pre, lib1770_sample_t sample)
 
 void lib1770_pre_flush(lib1770_pre_t *pre)
 {
-  int channels=pre->channels;
+  int channels=(pre->channels > LIB1770_MAX_CHANNELS ? LIB1770_MAX_CHANNELS : pre->channels);
   lib1770_sample_t sample;
   int i;
 
