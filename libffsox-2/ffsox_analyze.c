@@ -67,7 +67,9 @@ int ffsox_analyze(analyze_config_t *ac)
   cc.shortterm=ac->shortterm;
 
   if (LIB1770_MAX_CHANNELS <= cc.channels) {
-    fprintf(stderr, "\nError: ITU BS.1770 specifies only up to 5 audio channels, this audio track has %d channels.\n", cc.channels);
+    fprintf(stderr,
+      "\nError: ITU BS.1770 specifies only up to %d audio channels, this audio track has %d channels.\n",
+      LIB1770_MAX_CHANNELS, cc.channels);
     goto si;
   }
 
