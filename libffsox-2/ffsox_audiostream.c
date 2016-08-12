@@ -63,7 +63,9 @@ int ffsox_audiostream(AVFormatContext *fc, int *aip, int *vip)
         else if (ai<0||2==cc->channels) {
           // if an audio stream alreay was found and is non-stereo,
           // replace it by this stereo one.
-          if (2!=fc->streams[ai]->codec->channels)
+		  if (ai<0)
+            ai=i;
+          else if (2!=fc->streams[ai]->codec->channels)
             ai=i;
         }
 
