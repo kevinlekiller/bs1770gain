@@ -580,7 +580,8 @@ MAKEFLAGS=
 # Identity of this package.
 PACKAGE_NAME='bs1770gain'
 PACKAGE_TARNAME='bs1770gain'
-PACKAGE_VERSION='0.4.11-beta-2'
+#PACKAGE_VERSION='0.4.11-beta-2'
+PACKAGE_VERSION='0.4.11'
 PACKAGE_STRING='bs1770gain 0.4.11-beta-2'
 PACKAGE_BUGREPORT='pbelkner@users.sf.net'
 PACKAGE_URL='http://bs1770gain.sourceforge.net/'
